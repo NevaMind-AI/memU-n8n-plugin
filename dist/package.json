@@ -17,17 +17,17 @@
         "workflow"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/Vishesh-Paliwal/n8n-nodes-memu#readme",
+    "homepage": "https://github.com/NevaMind-AI/memU-n8n-plugin",
     "author": {
         "name": "MemU Team",
         "email": "support@memu.so"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Vishesh-Paliwal/n8n-nodes-memu.git"
+        "url": "git+https://github.com/NevaMind-AI/memU-n8n-plugin"
     },
     "bugs": {
-        "url": "https://github.com/Vishesh-Paliwal/n8n-nodes-memu/issues"
+        "url": "https://github.com/NevaMind-AI/memU-n8n-plugin/issues"
     },
     "engines": {
         "node": ">=18.10",
