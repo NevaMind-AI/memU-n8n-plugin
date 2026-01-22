@@ -104,7 +104,7 @@ export class MemUMemorize implements INodeType {
 					show: { conversationSource: ['input'] },
 				},
 				default: 'messages',
-				description: 'Field name containing the conversation messages array in input data. Expected format: [{role: "user"|"assistant", content: "..."}]',
+				description: 'Field name containing the conversation messages array in input data. Expected format: [{role: "user"|"assistant", content: "..."}].',
 				required: true,
 			},
 			{

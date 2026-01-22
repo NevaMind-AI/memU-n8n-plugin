@@ -19,11 +19,11 @@ This is an n8n community node package that integrates [MemU's](https://memu.so) 
 Since this package is built for n8n, you can install it for local development or testing directly from GitHub.
 
 ### 1. Install n8n and the MemU node package
-Use `pnpm` (or `npm`) to install n8n and this package into your local project:
+Use `pnpm` to install n8n and this package into your local project:
 
 ```bash
-pnpm add n8n
-pnpm add github:Vishesh-Paliwal/n8n-nodes-memu
+pnpm install n8n
+pnpm install github:username/repo-name
 ```
 
 ### 2. Configure n8n to load the custom node
@@ -33,7 +33,7 @@ Add a start script to your `package.json`:
 
 ```json
 "scripts": {
-  "start": "N8N_CUSTOM_EXTENSIONS=./node_modules/n8n-nodes-memu npx n8n start"
+  "start": "N8N_CUSTOM_EXTENSIONS=./node_modules/n8n-package/n8n-nodes-memu npx n8n start"
 }
 ```
 
@@ -47,19 +47,16 @@ pnpm start
 This package provides nodes to bridge the gap between your data and AI memory:
 
 ### 🧠 MemU Memorize
-The core node for building long-term memory. It points at a resource (URL or local path) and extracts "Memory Items" (Knowledge, Profile, Behavior, etc.) automatically.
+Register a memorization task to extract and store memories from a conversation
 
-*   **Modality**: Supports `conversation`, `document`, `image`, `video`, and `audio`.
+*   **Modality**: Supports `conversation`
 *   **User Scoping**: Crucial for multi-tenant agents. Attach a `user_id` so the memory remains private to that user.
 
 ### 🔍 MemU Retrieve
-The bridge for AI responses. It queries the stored memory to find relevant context.
-
-*   **RAG Method**: Fast vector-based similarity search.
-*   **LLM Method**: Deep semantic reasoning to find relevant context that simple search might miss.
+Retrieve memories using semantic search. This endpoint uses embedding-based similarity search to find relevant memories based on your query.
 
 ### 📋 MemU List Categories
-Returns a list of all categories the agent has created. This is useful for dynamic routing or building dashboards to show what the agent "knows".
+Retrieve all memory categories for a specific user and agent combination.
 
 ## Credentials
 
@@ -110,7 +107,7 @@ Connect a **Google Drive Trigger** to a **MemU Memorize** node. Every time you d
 
 - [MemU Official Website](https://memu.so)
 - [n8n Community Nodes Documentation](https://docs.n8n.io/integrations/community-nodes/)
-- [Report Issues](https://github.com/Vishesh-Paliwal/n8n-nodes-memu/issues)
+- [Report Issues](https://github.com/NevaMind-AI/memU-n8n-plugin/issues)
 
 ## License
 
