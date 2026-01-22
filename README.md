@@ -65,33 +65,6 @@ To use these nodes, you need a **MemU Cloud API** credential.
 1.  **Base URL**: Use `https://api.memu.so` (default).
 2.  **API Key**: Your secret key from the MemU dashboard.
 
-## Configuration Examples
-
-### Use Case: Building a Research Assistant
-Instead of manually reading 10 PDFs, use the **Memorize** node to process them into your agent's brain.
-
-**Memorize Configuration:**
-```json
-{
-  "resourceSource": "manual",
-  "resourceUrl": "https://example.com/research-paper.pdf",
-  "modality": "document",
-  "userScoping": {
-    "user_id": "researcher_01"
-  }
-}
-```
-
-**Retrieve Configuration:**
-When the researcher asks a question later, use the **Retrieve** node:
-```json
-{
-  "queryText": "What were the main conclusions of the climate study?",
-  "method": "rag",
-  "filters": { "user_id": "researcher_01" }
-}
-```
-
 ## Workflow Integration Patterns
 
 ### Auto-Updating Knowledge Base
